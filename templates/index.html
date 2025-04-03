@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting to Excel</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <button id="uploadBtn">Upload Image</button>
+    <div id="uploadOptions" style="display:none;">
+        <button id="cameraBtn">Upload through Camera</button>
+        <form id="fileForm" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*">
+            <button type="submit">Upload File</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
